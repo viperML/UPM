@@ -1,4 +1,4 @@
-program celsius_a_kelvin
+program farenheit_a_kelvin
     implicit none
     real :: Temp
 
@@ -7,4 +7,4 @@ program celsius_a_kelvin
 
     write(*,*) 5./9.*(Temp - 32.) + 273.15, 'K'
 
-end program celsius_a_kelvin
+end program farenheit_a_kelvin
