@@ -1,4 +1,4 @@
-program ejercicio1
+program ejercicio2
 
     integer :: a
     integer :: b
@@ -22,4 +22,4 @@ program ejercicio1
     write (* ,*) c /( b - a /2.0)
     write (* ,*)
     
-end program ejercicio1
+end program ejercicio2
