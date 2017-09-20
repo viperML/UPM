@@ -6,5 +6,5 @@ program area_vol_esfera
     write(*,*) 'Introduce el radio de la esfera:'
     read(*,*) radio
     
-    write(*,*) 'El área de una esfera de radio ', radio, ' es ', 4.*pi*radio**2, ', y el volumen es ', 4./3.*pi*radio**3
+    write(*,*) 'El área de una esfera de radio', radio, 'es' , 4.*pi*radio**2 , 'y el volumen es' , 4./3.*pi*radio**3
 end program area_vol_esfera
