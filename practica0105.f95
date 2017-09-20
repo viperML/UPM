@@ -2,8 +2,8 @@ program intercambiar_xy
     implicit none
     integer :: x
     integer :: y
-    integer :: x1
-    integer :: y1
+    integer :: xBUFFER
+    integer :: yBUFFER
 
     write(*,*) 'Introduce x:'
     read(*,*) x 
@@ -11,9 +11,12 @@ program intercambiar_xy
     write(*,*) 'Introduce y:'
     read(*,*) y
 
-    x1=y
-    y1=x
+    xBUFFER=y
+    yBUFFER=x
 
-    write(*,*) 'x vale:', x1,', y vale :', y1
+    x=xBUFFER
+    y=yBUFFER
 
+
+    write(*,*) 'x vale:', x,', y vale :', y
 end program intercambiar_xy
