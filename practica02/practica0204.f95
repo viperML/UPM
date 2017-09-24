@@ -1,9 +1,7 @@
 program funcion_valores
 implicit none
 
-real :: x
-real :: y
-real :: resultado
+real :: x, y, resultado
 
 write(*,*) 'Introduce los valores de x e y:'
 read(*,*) x,y

@@ -1,4 +1,4 @@
-program ejercicio1
+program ejercicio1 ! Copia literal del ejercicio propuesto
     integer :: a
     integer :: b
     real :: c

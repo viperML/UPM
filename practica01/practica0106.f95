@@ -2,11 +2,11 @@ program devolver_cifras
     implicit none
     integer :: numero
     
-    write(*,*) 'Introduce un numero de 3 cifras:'
+    write(*,*) 'Introduce un entero de 3 cifras:'
     read(*,*) numero
     
-    if (numero > 999) then
-        error stop "El numero es de mas de 3 cifras"
+    if (numero > 999 .OR. numero < 0) then
+        error stop "El numero es de mas de 3 cifras o no es entero"
     end if
 
     write(*,*) numero/100, 'centenas '
@@ -14,4 +14,5 @@ program devolver_cifras
     write(*,*) numero/10, 'decenas'
     numero = numero - (numero/10)*10
     write(*,*) numero, 'unidades'
+    
 end program devolver_cifras
