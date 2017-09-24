@@ -3,6 +3,7 @@ implicit none
 
 real :: x, y, resultado
 
+write(*,*) 'Usar practica0204.sh para consultar f(x,y)'
 write(*,*) 'Introduce los valores de x e y:'
 read(*,*) x,y
 
@@ -22,9 +23,9 @@ else if(x > y .and. y > -7.) then
 
     if (x < -2.) then
         resultado = y - x
-    else if (y /= 0) then
+    else if ( -2. <= x .AND. x < 2. .AND. y /= 0) then
         resultado = x / y
-    else
+    else if ( -2. <= x .AND. x < 2. .AND. y == 0) then
         resultado = 0.
     end if
 
