@@ -23,9 +23,9 @@ else if(x > y .and. y > -7.) then
 
     if (x < -2.) then
         resultado = y - x
-    else if ( -2. <= x .AND. x < 2. .AND. y /= 0) then
+    else if ( -2. <= x .AND. x < 2. .AND. y /= 0.) then
         resultado = x / y
-    else if ( -2. <= x .AND. x < 2. .AND. y == 0) then
+    else if ( -2. <= x .AND. x < 2. .AND. y == 0.) then
         resultado = 0.
     end if
 
