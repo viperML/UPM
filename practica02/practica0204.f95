@@ -3,7 +3,7 @@ implicit none
 
 real :: x, y, resultado
 
-write(*,*) 'Usar practica0204.sh para consultar f(x,y)'
+CALL execute_command_line('./practica0204.sh')
 write(*,*) 'Introduce los valores de x e y:'
 read(*,*) x,y
 

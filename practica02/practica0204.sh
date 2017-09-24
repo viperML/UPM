@@ -9,4 +9,5 @@ si  x > y, y>-7     y - x               si x < -2
                     x/y                 si 2 > x >= -2, y != 0
                     0                   si 2 > x >= -2, y = 0
 
-resto de casos      7x^3 + 2x^2 - x + 5"
+resto de casos      7x^3 + 2x^2 - x + 5
+"
