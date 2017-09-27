@@ -3,7 +3,7 @@ implicit none
 
 real :: x, y, resultado
 
-CALL execute_command_line('cat practica0204.dat')
+CALL execute_command_line('cat p0204.dat')
 write(*,*) 'Introduce los valores de x e y:'
 read(*,*) x,y
 
