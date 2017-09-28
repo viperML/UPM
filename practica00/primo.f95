@@ -14,8 +14,8 @@ do i = 2, n - 1
 end do 
 
 if (resultado .eqv. .true.) then            !! Para que quede bonito
-    write(*,*) "El numero es primo"
-else
+    write(*,*) "El numero es primo"         !! En vez de devolver T o F
+else                                        !! uso frases en espanol
     write(*,*) "El numero no es primo"
 end if
 
