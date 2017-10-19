@@ -6,9 +6,7 @@ integer :: i, j, n
 integer, allocatable :: A(:,:), X(:), b(:)
 write(*,*) "Introduce el tamaño de las matrices:"
 read(*,*) n
-allocate(A(n,n))
-allocate(x(n))
-allocate(b(n))
+allocate(A(n,n), x(n), b(n))
 
 A = 0
 do i=1,n
@@ -19,10 +17,10 @@ end do
 do i=1,n
     x(i) = i**2
 end do
-write(*,*) A
-write(*,*) x
+
 
 ! CALCULO DEL VECTOR RESULTADO
+b=0
 do i=1, 3
     do j=1, 3
         b(i) = b(i) + A(i,j)*x(j)
