@@ -1,8 +1,12 @@
 program taylor1
+
+! Declaración de variables
 implicit none
 integer :: N, contador, factorial 
 real*8 :: x, resultado_factorial, desarrollo = 0.d0, tol
 real*8, allocatable :: coeficientes(:)
+
+! Datos introducidos por el usuario
 write(*,*) "Introduce el valor de x:"
 read(*,*) x
 write(*,*) "Introduce N:"
@@ -27,7 +31,7 @@ end do
 do contador = 0, N-1
  desarrollo = desarrollo + coeficientes(contador+1) * x**(2*contador + 1)
 end do
-write(*,*) "Valor del desarrolo de Taylor", desarrollo, "Valor de sin(x)", sin(x)
+write(*,*) "Valor del desarrolo de Taylor:", desarrollo, "Valor de sin(x):", sin(x)
 write(*,*) "Error cometido:", abs(desarrollo - sin(x))
 if ( abs(desarrollo - sin(x)) > tol)  write(*,*) "El error el mayor que la tolerancia, introduzca más términos"
 
