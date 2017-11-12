@@ -2,8 +2,8 @@ program taylor1
 
 ! Declaración de variables
 implicit none
-integer :: N, contador, factorial 
-real*8 :: x, resultado_factorial, desarrollo = 0.d0, tol
+integer :: N, contador 
+real*8 :: x, resultado_factorial, desarrollo = 0.d0, tol, factorial
 real*8, allocatable :: coeficientes(:)
 
 ! Datos introducidos por el usuario
@@ -13,9 +13,9 @@ write(*,*) "Introduce N:"
 read(*,*) N
 write(*,*) "Introduce la tolerancia:"
 read(*,*) tol
-allocate(coeficientes(N))
+allocate(coeficientes(N+1))
 
-do contador = 0, N-1
+do contador = 0, N
  ! Calcular el valor de(2N+1)!
  resultado_factorial = 1
  do factorial = 2*contador + 1, 1, -1
@@ -24,7 +24,7 @@ do contador = 0, N-1
  !! write(*,*) resultado_factorial
 
  ! Calcular coeficientes
- coeficientes(contador+1) = ((-1.)**contador) / resultado_factorial
+ coeficientes(contador) = ((-1.)**contador) / resultado_factorial
 end do
 !! write(*,*) "Coeficientes:", coeficientes
 
