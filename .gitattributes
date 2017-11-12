@@ -1,3 +1,4 @@
 private filter=git-crypt diff=git-crypt
 private/test2.dat filter=git-crypt diff=git-crypt
+test3.dat filter=git-crypt diff=git-crypt
 *.key filter=git-crypt diff=git-crypt
