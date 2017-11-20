@@ -33,12 +33,9 @@ contains
     integer, intent(in) :: vector(:)
     real :: desviacion, average
     integer :: i
-
     average = media(vector)
-    ! write(*,*) "Average =", average
     do i=1, size(vector)
       desviacion = desviacion + ( vector(i) - average )**2.
-      !write(*,*) desviacion
     end do
     desviacion = sqrt( desviacion /(size(vector)-1)  )
   end function desviacion
