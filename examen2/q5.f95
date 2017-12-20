@@ -19,8 +19,8 @@ incremento = (b-a)/(N*1.d0)
 do i = 0, N
   X(i+1) = a + i*incremento
 end do
-write(*,*) "X:", X ! DEBUG
-write(*,*) "Ax:", incremento ! DEBUG
+! write(*,*) "X:", X ! DEBUG
+! write(*,*) "Ax:", incremento ! DEBUG
 
 do i=0, N
   if(X(i+1) <= -pi/2.d0) then
@@ -31,10 +31,10 @@ do i=0, N
     F(i+1) = 0.d0
   end if
 
-  write(*,*)  F(i+1), i
+!  write(*,*)  F(i+1), i
   suma = suma + F(i+1)*incremento
 end do
 
-write(*,*) suma
+write(*,*) "La suma es:",suma
 
 end program q5
