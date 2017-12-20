@@ -25,10 +25,16 @@ contains
     do i = 0, M
       f1_anterior = f1
       factorial = 1.d0
+
+      ! Atento que esto te calcula el factorial de lo que hay entre paréntesis. Está DPM
       do j = 0, (i)-1
         factorial = factorial*((i)-j)
       end do
+
+      ! Fórmula de Taylor
       f1 = f1 + (input**i) / factorial
+
+      ! Cuando se dejan de añadir terminos, se ha llegado al limite de real8, sale del bucle
       if(f1_anterior == f1) then
         write(*,*) "Limite alcanzado en M=", i
         exit
