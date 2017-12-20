@@ -32,7 +32,7 @@ do i=0, N
   end if
 
   write(*,*)  F(i+1), i
-  suma = suma + F(i+1)
+  suma = suma + F(i+1)*incremento
 end do
 
 write(*,*) suma
