@@ -1,6 +1,7 @@
 program q4
 implicit none
 real*8 :: output ! Aquí se almacena el valor de cada apartado y después se resetea
+real*8 :: output_matrix(4,4) ! CAMBIAR SEGUN M DEL TERCER APARTADO
 integer :: i
 
 write(*,*) "1 ----------------"
@@ -20,10 +21,11 @@ write(*,*) output
 
 write(*,*) "3 ----------------"
 output = 0.d0
-do i = 1, 5 ! Sumatorio con M=4 de las trazas de A, A*A, A*A*A, A*A*A*A, A*A*A*A*A
-  output = output + traza( A_elevada(A(4), i) )
+output_matrix = 0.d0
+do i = 1, 5 ! Se suman las matrices A, A*A, A*A*A, A*A*A*A y A*A*A*A*A y se halla su traza (con M=4)
+  output_matrix = output_matrix + A_elevada(A(4),i)
 end do
-write(*,*) output
+write(*,*) traza(output_matrix)
 
 contains 
   function A(M) ! Esta funcion devuelve una matriz MxM, según el valor de M

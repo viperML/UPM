@@ -1,6 +1,6 @@
 program q6
 implicit none
-real*8, parameter :: pi = 4*atan(1.d0)
+real*8, parameter :: pi = acos(-1.d0)
 
 write(*,*) "e¹, M=5", f1(1.d0, 5)
 write(*,*) "e¹, M=INF", f1(1.d0, 100)
