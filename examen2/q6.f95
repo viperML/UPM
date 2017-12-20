@@ -12,7 +12,7 @@ write(*,*) "cosh(1), M=10", f3(1.d0,10)
 write(*,*) "cosh(1), M=INF", f3(1.d0,100)
 
 write(*,*) "1/(1-0.9), M=20", f4(0.9d0,20)
-write(*,*) "1/(1-0.9), M=INF", f4(0.9d0, 100)
+write(*,*) "1/(1-0.9), M=INF", f4(0.9d0, 10000)
 
 contains
   function f1(input, M)
