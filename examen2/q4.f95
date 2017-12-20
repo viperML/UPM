@@ -23,6 +23,8 @@ do i = 1, 5
 end do
 write(*,*) output
 
+write(*,*) A(2)
+
 
 contains 
   function A(M)
